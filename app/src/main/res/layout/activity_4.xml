@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Actividad 4: diseño del PDF (amarillo/naranja, azul ancho, verde/celeste/magenta) -->
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#FFFFFF">
+
+    <!-- Fila 1: Amarillo y Naranja -->
+    <View
+        android:id="@+id/viewAmarillo"
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        android:background="@drawable/bg_amarillo"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/viewNaranja"
+        android:layout_marginEnd="28dp" />
+
+    <View
+        android:id="@+id/viewNaranja"
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        android:background="@drawable/bg_naranja"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/viewAmarillo"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="28dp" />
+
+    <!-- Fila 2: Azul Ancho -->
+    <View
+        android:id="@+id/viewAzul"
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        android:background="@drawable/bg_azul"
+        app:layout_constraintTop_toBottomOf="@+id/viewAmarillo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="40dp" />
+
+    <!-- Fila 3: Tres cuadrados -->
+    <View
+        android:id="@+id/viewVerde"
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        android:background="@drawable/bg_verde"
+        app:layout_constraintTop_toBottomOf="@+id/viewAzul"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/viewCeleste"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="10dp" />
+
+    <View
+        android:id="@+id/viewCeleste"
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        android:background="@drawable/bg_celeste"
+        app:layout_constraintTop_toBottomOf="@+id/viewAzul"
+        app:layout_constraintStart_toEndOf="@+id/viewVerde"
+        app:layout_constraintEnd_toStartOf="@+id/viewRosa"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp" />
+
+    <View
+        android:id="@+id/viewRosa"
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        android:background="@drawable/bg_magenta"
+        app:layout_constraintTop_toBottomOf="@+id/viewAzul"
+        app:layout_constraintStart_toEndOf="@+id/viewCeleste"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="10dp" />
+
+    <!-- Barra de navegación con iconos -->
+    <LinearLayout
+        android:id="@+id/barraNavegacion"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:paddingBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageButton
+            android:id="@+id/btnRegresar"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:background="@drawable/bg_boton_nav"
+            android:src="@drawable/ic_back"
+            android:scaleType="centerInside"
+            android:padding="14dp"
+            android:contentDescription="Regresar" />
+
+        <ImageButton
+            android:id="@+id/btnInicio"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_marginStart="24dp"
+            android:background="@drawable/bg_boton_nav"
+            android:src="@drawable/ic_home"
+            android:scaleType="centerInside"
+            android:padding="14dp"
+            android:contentDescription="Inicio" />
+
+        <ImageButton
+            android:id="@+id/btnMenu"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_marginStart="24dp"
+            android:background="@drawable/bg_boton_nav"
+            android:src="@drawable/ic_apps"
+            android:scaleType="centerInside"
+            android:padding="14dp"
+            android:contentDescription="Menú" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

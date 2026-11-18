@@ -1,0 +1,8 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme: se fuerza el tema claro para que la app se vea
+         igual aunque el teléfono esté en modo oscuro. -->
+    <style name="Base.Theme.Deber1" parent="Theme.Material3.Light.NoActionBar">
+        <!-- Customize your dark theme here. -->
+        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+    </style>
+</resources>
